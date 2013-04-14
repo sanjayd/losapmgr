@@ -10,7 +10,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'sqlite3'
 
-group :test do
+group :development, :test do
   gem 'autotest-fsevent'
   gem 'autotest-growl'
   gem 'autotest-standalone'
