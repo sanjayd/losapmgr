@@ -13,4 +13,17 @@ describe MembersController do
       should respond_with(:success)
     end
   end
+  
+  describe 'new' do
+    it 'should handle html' do
+      get 'new', format: 'html'
+      should respond_with(:success)
+    end
+    
+    it 'should handle json' do
+      get 'new', format: 'json'
+      should respond_with(:success)
+    end
+  end
+
 end

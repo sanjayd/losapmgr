@@ -17,6 +17,7 @@ group :development, :test do
   gem 'autotest-growl'
   gem 'autotest-standalone'
   gem 'debugger'
+  gem 'mocha', require: 'mocha/api'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'

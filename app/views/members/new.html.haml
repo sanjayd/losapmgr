@@ -1,0 +1,10 @@
+.offset3.span6  
+  .page-title
+    %h1 Create New Member
+  = bootstrap_form_for member, html: {class: 'form-horizontal'} do |f|
+    = f.text_field :firstname, label: 'First Name'
+    = f.text_field :mi, label: 'Middle Initial'
+    = f.text_field :lastname, label: 'Last Name'
+    = f.text_field :badgeno, label: 'Badge Number'
+    = f.text_field :ssn, label: 'SSN'
+    = f.actions
