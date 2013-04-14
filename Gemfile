@@ -5,6 +5,8 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails'
+gem 'bootstrap_forms'
 gem 'decent_exposure'
 gem 'haml-rails'
 gem 'jquery-rails'
