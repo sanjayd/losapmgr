@@ -9,7 +9,7 @@ FactoryGirl.define do
       "#{n}"
     end
     sequence :ssn do |n|
-      "#{n}"
+      sprintf("%9d", n)
     end
   end
 end
