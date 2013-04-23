@@ -11,5 +11,9 @@ class MembersController < ApplicationController
   def new
     respond_with member
   end
-    
+  
+  def create
+    flash[:notice] = 'Created new member' if member.save
+    respond_with member, location: members_path
+  end  
 end

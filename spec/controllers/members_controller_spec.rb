@@ -26,4 +26,38 @@ describe MembersController do
     end
   end
 
+  describe 'create' do
+    describe 'success' do
+      before do
+        ActiveModel::Errors.any_instance.stubs(:empty?).returns(true)
+      end
+      
+      it 'should handle html' do
+        post :create, format: 'html'
+        should redirect_to(members_path)
+      end
+      
+      it 'should handle json' do
+        post :create, format: 'json'
+        should respond_with 201
+      end
+    end
+    
+    describe 'failure' do
+      before do
+        ActiveModel::Errors.any_instance.stubs(:empty?).returns(false)
+      end
+    
+      it 'should handle html' do
+        post :create, format: 'html'
+        should respond_with(200)
+      end
+      
+      it 'should handle json' do
+        post :create, format: 'json'
+        should respond_with(422)
+      end
+    end
+  end
+
 end
