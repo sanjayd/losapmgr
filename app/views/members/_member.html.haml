@@ -1,0 +1,11 @@
+%tr
+  %td= member.lastname
+  %td= member.firstname
+  %td= member.mi
+  %td= member.badgeno
+  %td
+    .btn-group
+      = link_to edit_member_path(member), class: 'btn btn-mini' do
+        %i.icon-pencil
+      = link_to member_path(member), method: :delete, class: 'btn btn-mini' do
+        %i.icon-trash

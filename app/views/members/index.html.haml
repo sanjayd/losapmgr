@@ -1,0 +1,14 @@
+.span6.offset3
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th Last Name
+        %th First Name
+        %th MI
+        %th Badge Number
+        %th Actions
+    %tbody
+      = (render members) || no_members
+  = link_to new_member_path, class: 'btn btn-mini' do
+    %i.icon-plus
+    New Member
